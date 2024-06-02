@@ -53,23 +53,25 @@ const string = "The quick brown fox jumps over the lazy dog.";
 
 2. caseString.lowerCase(string); // the quick brown fox jumps over the lazy dog.
 
-3. caseString.reverseTitleCase(string); // thE quicK browN foX jumpS oveR thE lazY dog.
+4. caseString.titleCase(string); // The Quick Brown Fox Jumps Over The Lazy Dog.
 
-4. caseString.invertCase(string); // tHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG..
+4. caseString.reverseTitleCase(string); // thE quicK browN foX jumpS oveR thE lazY dog.
 
-5. caseString.camelCase(string); // theQuickBrownFoxJumpsOverTheLazyDog.
+5. caseString.invertCase(string); // tHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG..
 
-6. caseString.pascalCase(string); // TheQuickBrownFoxJumpsOverTheLazyDog
+6. caseString.camelCase(string); // theQuickBrownFoxJumpsOverTheLazyDog.
 
-7. caseString.kebabCase(string); // the-quick-brown-fox-jumps-over-the-lazy-dog.
+7. caseString.pascalCase(string); // TheQuickBrownFoxJumpsOverTheLazyDog
 
-8. caseString.snakeCase(string); // the_quick_brown_fox_jumps_over_the_lazy_dog.
+8. caseString.kebabCase(string); // the-quick-brown-fox-jumps-over-the-lazy-dog.
 
-9. caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG.
+9. caseString.snakeCase(string); // the_quick_brown_fox_jumps_over_the_lazy_dog.
 
-10. caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg.
+10. caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG.
 
-11. caseString.toggleCase(string); // tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG.
+11. caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg.
+
+12. caseString.toggleCase(string); // tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG.
 ```
 
 ### Support

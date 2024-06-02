@@ -15,6 +15,21 @@ const lowerCase = (str) => str.toLowerCase();
 const upperCase = (str) => str.toUpperCase();
 
 /**
+ * Converts a string to title case.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} The string converted to title case.
+ */
+const titleCase = (str) => {
+  return str.replace(
+    /(^|[^a-zA-Z\u00C0-\u017F'])([a-zA-Z\u00C0-\u017F])/g,
+    function (c) {
+      return c.toUpperCase();
+    }
+  );
+};
+
+/**
  * Reverses the title case of a string.
  *
  * @param {string} str - The input string.
@@ -169,6 +184,7 @@ const toggleCase = (str) => {
 module.exports = {
   lowerCase,
   upperCase,
+  titleCase,
   reverseTitleCase,
   invertCase,
   camelCase,
