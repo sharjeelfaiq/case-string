@@ -1,0 +1,19 @@
+{
+  "name": "case-string",
+  "version": "1.0.0",
+  "description": "A Node.js module providing various string manipulation functions to handle string cases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharjeelfaiq/case-string.git"
+  },
+  "author": "Sharjeel Faiq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharjeelfaiq/case-string/issues"
+  },
+  "homepage": "https://github.com/sharjeelfaiq/case-string#readme"
+}
