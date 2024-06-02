@@ -50,12 +50,19 @@ case-string offers a wide range of functions for various string case manipulatio
 const string = "The quick brown fox jumps over the lazy dog.";
 
 caseString.reverseTitleCase(string); // thE quicK browN foX jumpS oveR thE lazY dog.
+
 caseString.invertCase(string); // theQuickBrownFoxJumpsOverTheLazyDog.
+
 caseString.camelCase(string); // TheQuickBrownFoxJumpsOverTheLazyDog
+
 caseString.pascalCase(string); // TheQuickBrownFoxJumpsOverTheLazyDog
+
 caseString.kebabCase(string); // the-quick-brown-fox-jumps-over-the-lazy-dog.
+
 caseString.snakeCase(string); // the_quick_brown_fox_jumps_over_the_lazy_dog.
+
 caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG.
+
 caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg.
 ```
 
