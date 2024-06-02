@@ -51,9 +51,9 @@ const string = "The quick brown fox jumps over the lazy dog.";
 
 1. caseString.reverseTitleCase(string); // thE quicK browN foX jumpS oveR thE lazY dog.
 
-2. caseString.invertCase(string); // theQuickBrownFoxJumpsOverTheLazyDog.
+2. caseString.invertCase(string); // tHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG..
 
-3. caseString.camelCase(string); // TheQuickBrownFoxJumpsOverTheLazyDog
+3. caseString.camelCase(string); // theQuickBrownFoxJumpsOverTheLazyDog.
 
 4. caseString.pascalCase(string); // TheQuickBrownFoxJumpsOverTheLazyDog
 
