@@ -149,6 +149,23 @@ const alternateCase2 = (str) => {
   return alternateCasedStr;
 };
 
+/**
+ * Converts the case of a string by toggling the case of each word.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} The modified string with toggled case.
+ */
+const toggleCase = (str) => {
+  const newText = str
+    .toUpperCase()
+    .split(" ")
+    .map(function (word) {
+      return word.charAt(0).toLowerCase() + word.slice(1);
+    })
+    .join(" ");
+  return newText;
+};
+
 module.exports = {
   lowerCase,
   upperCase,
@@ -160,4 +177,5 @@ module.exports = {
   snakeCase,
   alternateCase1,
   alternateCase2,
+  toggleCase,
 };

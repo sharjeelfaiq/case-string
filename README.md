@@ -64,6 +64,8 @@ const string = "The quick brown fox jumps over the lazy dog.";
 7. caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG.
 
 8. caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg.
+
+9. caseString.toggleCase(string); // tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG.
 ```
 
 ### Support
