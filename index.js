@@ -135,6 +135,42 @@ const snakeCase = (str) => {
 };
 
 /**
+ * Converts a string to dot case.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} The dot cased string.
+ */
+const dotCase = (str) => {
+  const toDotCase = (str = "") => {
+    const strArr = str.split(" ");
+    const snakeArr = strArr.reduce((acc, val) => {
+      return acc.concat(val.toLowerCase());
+    }, []);
+    return snakeArr.join(".");
+  };
+  const dotCasedStr = toDotCase(str);
+  return dotCasedStr;
+};
+
+/**
+ * Converts a string to path case.
+ *
+ * @param {string} str - The input string to be converted.
+ * @returns {string} The converted string in path case.
+ */
+const pathCase = (str) => {
+  const toPathCase = (str = "") => {
+    const strArr = str.split(" ");
+    const snakeArr = strArr.reduce((acc, val) => {
+      return acc.concat(val.toLowerCase());
+    }, []);
+    return snakeArr.join("/");
+  };
+  const pathCasedStr = toPathCase(str);
+  return pathCasedStr;
+};
+
+/**
  * Converts the characters of a string to alternate case.
  *
  * @param {string} str - The input string.
@@ -191,6 +227,8 @@ module.exports = {
   pascalCase,
   kebabCase,
   snakeCase,
+  dotCase,
+  pathCase,
   alternateCase1,
   alternateCase2,
   toggleCase,

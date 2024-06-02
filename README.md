@@ -67,6 +67,10 @@ const string = "The quick brown fox jumps over the lazy dog.";
 
 9. caseString.snakeCase(string); // the_quick_brown_fox_jumps_over_the_lazy_dog.
 
+9. caseString.dotCase(string); // the.quick.brown.fox.jumps.over.the.lazy.dog.
+
+9. caseString.pathCase(string); // the/quick/brown/fox/jumps/over/the/lazy/dog.
+
 10. caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG.
 
 11. caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg.

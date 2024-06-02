@@ -15,5 +15,21 @@
   "bugs": {
     "url": "https://github.com/sharjeelfaiq/case-string/issues"
   },
-  "homepage": "https://github.com/sharjeelfaiq/case-string#readme"
+  "homepage": "https://github.com/sharjeelfaiq/case-string#readme",
+  "keywords": [
+    "lowerCase",
+    "upperCase",
+    "titleCase",
+    "reverseTitleCase",
+    "invertCase",
+    "camelCase",
+    "pascalCase",
+    "kebabCase",
+    "snakeCase",
+    "dotCase",
+    "pathCase",
+    "alternateCase1",
+    "alternateCase2",
+    "toggleCase"
+  ]
 }
