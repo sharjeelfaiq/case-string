@@ -47,35 +47,39 @@ import caseString from "case-string";
 case-string offers a wide range of functions for various string case manipulation tasks. Here's a brief description of each function:
 
 ```javascript
-const string = "The quick brown fox jumps over the lazy dog.";
+const string = "The quick brown fox jumps over the lazy dog";
 
-1. caseString.upperCase(string); // THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+1. caseString.upperCase(string); // THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
 
-2. caseString.lowerCase(string); // the quick brown fox jumps over the lazy dog.
+2. caseString.lowerCase(string); // the quick brown fox jumps over the lazy dog
 
-4. caseString.titleCase(string); // The Quick Brown Fox Jumps Over The Lazy Dog.
+4. caseString.titleCase(string); // The Quick Brown Fox Jumps Over The Lazy Dog
 
-4. caseString.reverseTitleCase(string); // thE quicK browN foX jumpS oveR thE lazY dog.
+4. caseString.reverseTitleCase(string); // thE quicK browN foX jumpS oveR thE lazY dog
 
-5. caseString.invertCase(string); // tHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG..
+5. caseString.invertCase(string); // tHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
 
-6. caseString.camelCase(string); // theQuickBrownFoxJumpsOverTheLazyDog.
+6. caseString.camelCase(string); // theQuickBrownFoxJumpsOverTheLazyDog
 
 7. caseString.pascalCase(string); // TheQuickBrownFoxJumpsOverTheLazyDog
 
-8. caseString.kebabCase(string); // the-quick-brown-fox-jumps-over-the-lazy-dog.
+8. caseString.kebabCase(string); // the-quick-brown-fox-jumps-over-the-lazy-dog
 
-9. caseString.snakeCase(string); // the_quick_brown_fox_jumps_over_the_lazy_dog.
+9. caseString.dotCase(string); // the.quick.brown.fox.jumps.over.the.lazy.dog
 
-9. caseString.dotCase(string); // the.quick.brown.fox.jumps.over.the.lazy.dog.
+10. caseString.pathCase(string); // the/quick/brown/fox/jumps/over/the/lazy/dog
 
-9. caseString.pathCase(string); // the/quick/brown/fox/jumps/over/the/lazy/dog.
+11. caseString.snakeCase(string); // the_quick_brown_fox_jumps_over_the_lazy_dog
 
-10. caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG.
+12. caseString.pascalSnakeCase(string); // The_Quick_Brown_Fox_Jumps_Over_The_Lazy_Dog
 
-11. caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg.
+13. caseString.constantCase(string); // THE_QUICK_BROWN_FOX_JUMPS_OVER_THE_LAZY_DOG
 
-12. caseString.toggleCase(string); // tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG.
+14. caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG
+
+15. caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg
+
+16. caseString.toggleCase(string); // tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG
 ```
 
 ### Support

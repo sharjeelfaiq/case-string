@@ -135,6 +135,51 @@ const snakeCase = (str) => {
 };
 
 /**
+ * Converts a string to Pascal Snake Case.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} The string converted to Pascal Snake Case.
+ */
+const pascalSnakeCase = (str) => {
+  const toPascalSnakeCase = (str = "") => {
+    const strArr = str.split(" ");
+    const snakeArr = strArr.reduce((acc, val) => {
+      return acc.concat(
+        val
+          .replace(new RegExp(/[-_]+/, "g"), " ")
+          .replace(new RegExp(/[^\w\s]/, "g"), "")
+          .replace(
+            new RegExp(/\s+(.)(\w*)/, "g"),
+            ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`
+          )
+          .replace(new RegExp(/\w/), (s) => s.toUpperCase())
+      );
+    }, []);
+    return snakeArr.join("_");
+  };
+  const pascalSnakeCasedStr = toPascalSnakeCase(str);
+  return pascalSnakeCasedStr;
+};
+
+/**
+ * Converts a string to constant case.
+ *
+ * @param {string} str - The input string to convert.
+ * @returns {string} The converted string in constant case.
+ */
+const constantCase = (str) => {
+  const toConstantCase = (str = "") => {
+    const strArr = str.split(" ");
+    const snakeArr = strArr.reduce((acc, val) => {
+      return acc.concat(val.toUpperCase());
+    }, []);
+    return snakeArr.join("_");
+  };
+  const constantCasedStr = toConstantCase(str);
+  return constantCasedStr;
+};
+
+/**
  * Converts a string to dot case.
  *
  * @param {string} str - The input string.
@@ -226,6 +271,8 @@ module.exports = {
   camelCase,
   pascalCase,
   kebabCase,
+  constantCase,
+  pascalSnakeCase,
   snakeCase,
   dotCase,
   pathCase,
