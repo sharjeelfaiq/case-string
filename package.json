@@ -25,6 +25,8 @@
     "camelCase",
     "pascalCase",
     "kebabCase",
+    "constantCase",
+    "pascalSnakeCase",
     "snakeCase",
     "dotCase",
     "pathCase",
