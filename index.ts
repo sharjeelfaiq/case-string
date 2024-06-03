@@ -4,7 +4,7 @@
  * @param {string} str - The string to convert.
  * @returns {string} The converted lowercase string.
  */
-const lowerCase = (str: string) => str.toLowerCase();
+export const lowerCase = (str: string) => str.toLowerCase();
 
 /**
  * Converts a string to uppercase.
@@ -12,7 +12,7 @@ const lowerCase = (str: string) => str.toLowerCase();
  * @param {string} str - The input string.
  * @returns {string} The uppercase string.
  */
-const upperCase = (str: string) => str.toUpperCase();
+export const upperCase = (str: string) => str.toUpperCase();
 
 /**
  * Converts a string to title case.
@@ -20,7 +20,7 @@ const upperCase = (str: string) => str.toUpperCase();
  * @param {string} str - The input string.
  * @returns {string} The string converted to title case.
  */
-const titleCase = (str: string) => {
+export const titleCase = (str: string) => {
   const titledStr = str.replace(
     /(^|[^a-zA-Z\u00C0-\u017F'])([a-zA-Z\u00C0-\u017F])/g,
     function (c) {
@@ -36,7 +36,7 @@ const titleCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The reversed title case string.
  */
-const reverseTitleCase = (str: string) => {
+export const reverseTitleCase = (str: string) => {
   const reversedTitleStr = str
     .toLowerCase()
     .split(" ")
@@ -53,7 +53,7 @@ const reverseTitleCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The inverted string.
  */
-const invertCase = (str: string) => {
+export const invertCase = (str: string) => {
   const invertedStr = str.replace(/./g, (c) =>
     c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()
   );
@@ -67,7 +67,7 @@ const invertCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The camel case version of the input string.
  */
-const camelCase = (str: string) => {
+export const camelCase = (str: string) => {
   function camelize(str: string) {
     return str
       .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
@@ -85,7 +85,7 @@ const camelCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The PascalCase string.
  */
-const pascalCase = (str: string) => {
+export const pascalCase = (str: string) => {
   function toPascalCase(str: string) {
     return `${str}`
       .replace(new RegExp(/[-_]+/, "g"), " ")
@@ -106,7 +106,7 @@ const pascalCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The kebab cased string.
  */
-const kebabCase = (str: string) => {
+export const kebabCase = (str: string) => {
   const kebabCase = (str: string) =>
     str
       .replace(/([a-z])([A-Z])/g, "$1-$2")
@@ -123,7 +123,7 @@ const kebabCase = (str: string) => {
  * @param {string} str - The input string to convert.
  * @returns {string} The snake cased string.
  */
-const snakeCase = (str: string) => {
+export const snakeCase = (str: string) => {
   const toSnakeCase = (str = "") => {
     const strArr = str.split(" ");
     const snakeArr = strArr.reduce((acc: string[], val: string) => {
@@ -141,7 +141,7 @@ const snakeCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The string converted to Pascal Snake Case.
  */
-const pascalSnakeCase = (str: string) => {
+export const pascalSnakeCase = (str: string) => {
   const toPascalSnakeCase = (str: string = ""): string => {
     const strArr: string[] = str.split(" ");
     const snakeArr = strArr.reduce((acc: string[], val: string) => {
@@ -168,7 +168,7 @@ const pascalSnakeCase = (str: string) => {
  * @param {string} str - The input string to convert.
  * @returns {string} The converted string in constant case.
  */
-const constantCase = (str: string) => {
+export const constantCase = (str: string) => {
   const toConstantCase = (str = "") => {
     const strArr = str.split(" ");
     const snakeArr = strArr.reduce((acc: string[], val: string) => {
@@ -186,7 +186,7 @@ const constantCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The dot cased string.
  */
-const dotCase = (str: string) => {
+export const dotCase = (str: string) => {
   const toDotCase = (str = "") => {
     const strArr = str.split(" ");
     const snakeArr = strArr.reduce((acc: string[], val) => {
@@ -204,7 +204,7 @@ const dotCase = (str: string) => {
  * @param {string} str - The input string to be converted.
  * @returns {string} The converted string in path case.
  */
-const pathCase = (str: string) => {
+export const pathCase = (str: string) => {
   const toPathCase = (str = "") => {
     const strArr = str.split(" ");
     const snakeArr = strArr.reduce((acc: string[], val) => {
@@ -222,7 +222,7 @@ const pathCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The string with characters converted to alternate case.
  */
-const alternateCase1 = (str: string) => {
+export const alternateCase1 = (str: string) => {
   var newText = str.toLowerCase().split("");
   for (var i = 0; i < newText.length; i += 2) {
     newText[i] = newText[i].toUpperCase();
@@ -237,7 +237,7 @@ const alternateCase1 = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The string with characters converted to alternate case.
  */
-const alternateCase2 = (str: string) => {
+export const alternateCase2 = (str: string) => {
   var newText = str.toUpperCase().split("");
   for (var i = 0; i < newText.length; i += 2) {
     newText[i] = newText[i].toLowerCase();
@@ -252,7 +252,7 @@ const alternateCase2 = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The modified string with toggled case.
  */
-const toggleCase = (str: string) => {
+export const toggleCase = (str: string) => {
   const newText = str
     .toUpperCase()
     .split(" ")
@@ -269,7 +269,7 @@ const toggleCase = (str: string) => {
  * @param {string} str - The input string.
  * @returns {string} The string converted to sponge case.
  */
-const spongeCase = (str: string) => {
+export const spongeCase = (str: string) => {
   let result = "";
   for (const char of str) {
     result += Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase();
@@ -289,7 +289,7 @@ var hasCamel = /([a-z][A-Z]|[A-Z][a-z])/;
  * @return {String}
  */
 
-function noCase(str: string) {
+export function noCase(str: string) {
   if (hasSpace.test(str)) return str.toLowerCase();
   if (hasSeparator.test(str)) return (unseparate(str) || str).toLowerCase();
   if (hasCamel.test(str)) return uncamelize(str).toLowerCase();
@@ -340,7 +340,7 @@ function uncamelize(string: string) {
  * @param {string} str - The input string to convert.
  * @returns {string} The converted string in sentence case.
  */
-const sentenceCase = (str: string) => {
+export const sentenceCase = (str: string) => {
   return str
     .split(/(\S.+?[.!?])(?=\s+|$)/)
     .filter((sentence) => sentence.length > 0)
@@ -350,26 +350,4 @@ const sentenceCase = (str: string) => {
       );
     })
     .join("");
-};
-
-module.exports = {
-  lowerCase,
-  upperCase,
-  titleCase,
-  reverseTitleCase,
-  invertCase,
-  camelCase,
-  pascalCase,
-  kebabCase,
-  constantCase,
-  pascalSnakeCase,
-  snakeCase,
-  dotCase,
-  pathCase,
-  alternateCase1,
-  alternateCase2,
-  toggleCase,
-  spongeCase,
-  noCase,
-  sentenceCase,
 };
