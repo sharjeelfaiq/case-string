@@ -53,7 +53,7 @@ const string = "The quick brown fox jumps over the lazy dog";
 
 2. caseString.lowerCase(string); // the quick brown fox jumps over the lazy dog
 
-4. caseString.titleCase(string); // The Quick Brown Fox Jumps Over The Lazy Dog
+3. caseString.titleCase(string); // The Quick Brown Fox Jumps Over The Lazy Dog
 
 4. caseString.reverseTitleCase(string); // thE quicK browN foX jumpS oveR thE lazY dog
 
