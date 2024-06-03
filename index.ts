@@ -289,12 +289,12 @@ var hasCamel = /([a-z][A-Z]|[A-Z][a-z])/;
  * @return {String}
  */
 
-export function noCase(str: string) {
+export const noCase = (str: string) => {
   if (hasSpace.test(str)) return str.toLowerCase();
   if (hasSeparator.test(str)) return (unseparate(str) || str).toLowerCase();
   if (hasCamel.test(str)) return uncamelize(str).toLowerCase();
   return str.toLowerCase();
-}
+};
 
 /**
  * Separator splitter.
