@@ -262,6 +262,96 @@ const toggleCase = (str) => {
   return newText;
 };
 
+/**
+ * Converts a string to sponge case.
+ *
+ * @param {string} str - The input string.
+ * @returns {string} The string converted to sponge case.
+ */
+const spongeCase = (str) => {
+  let result = "";
+  for (const char of str) {
+    result += Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase();
+  }
+  return result;
+};
+
+var hasSpace = /\s/;
+var hasSeparator = /(_|-|\.|:)/;
+var hasCamel = /([a-z][A-Z]|[A-Z][a-z])/;
+
+/**
+ * Remove any starting case from a `string`, like camel or snake, but keep
+ * spaces and punctuation that may be important otherwise.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function noCase(string) {
+  if (hasSpace.test(string)) return string.toLowerCase();
+  if (hasSeparator.test(string))
+    return (unseparate(string) || string).toLowerCase();
+  if (hasCamel.test(string)) return uncamelize(string).toLowerCase();
+  return string.toLowerCase();
+}
+
+/**
+ * Separator splitter.
+ */
+
+var separatorSplitter = /[\W_]+(.|$)/g;
+
+/**
+ * Un-separate a `string`.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function unseparate(string) {
+  return string.replace(separatorSplitter, function (m, next) {
+    return next ? " " + next : "";
+  });
+}
+
+/**
+ * Camelcase splitter.
+ */
+
+var camelSplitter = /(.)([A-Z]+)/g;
+
+/**
+ * Un-camelcase a `string`.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function uncamelize(string) {
+  return string.replace(camelSplitter, function (m, previous, uppers) {
+    return previous + " " + uppers.toLowerCase().split("").join(" ");
+  });
+}
+
+/**
+ * Converts a paragraph into sentence case.
+ *
+ * @param {string} str - The input string to convert.
+ * @returns {string} The converted string in sentence case.
+ */
+const sentenceCase = (str) => {
+  return str
+    .split(/(\S.+?[.!?])(?=\s+|$)/)
+    .filter((sentence) => sentence.length > 0)
+    .map((sentence) => {
+      return (
+        sentence.charAt(0).toUpperCase() + sentence.substr(1).toLowerCase()
+      );
+    })
+    .join("");
+};
+
 module.exports = {
   lowerCase,
   upperCase,
@@ -279,4 +369,7 @@ module.exports = {
   alternateCase1,
   alternateCase2,
   toggleCase,
+  spongeCase,
+  noCase,
+  sentenceCase,
 };
