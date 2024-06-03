@@ -4,7 +4,7 @@
   "description": "A Node.js module providing various string manipulation functions to handle string cases.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,9 @@
     "alternateCase1",
     "alternateCase2",
     "toggleCase"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.5"
+  }
 }
