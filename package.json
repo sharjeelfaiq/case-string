@@ -28,11 +28,15 @@
     "kebabCase",
     "constantCase",
     "pascalSnakeCase",
+    "trainCase", 
     "snakeCase",
+    "constantCase",
+    "sentenceCase",
     "dotCase",
     "pathCase",
     "alternateCase1",
     "alternateCase2",
+    "spongeCase",
     "toggleCase"
   ],
   "devDependencies": {
