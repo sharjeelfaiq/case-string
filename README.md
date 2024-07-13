@@ -73,19 +73,21 @@ const string = "The quick brown fox jumps over the lazy dog";
 
 12. caseString.pascalSnakeCase(string); // The_Quick_Brown_Fox_Jumps_Over_The_Lazy_Dog
 
-13. caseString.constantCase(string); // THE_QUICK_BROWN_FOX_JUMPS_OVER_THE_LAZY_DOG
+13. caseString.trainCase(string); // The-Quick-Brown-Fox-Jumps-Over-The-Lazy-Dog
 
-14. caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG
+14. caseString.constantCase(string); // THE_QUICK_BROWN_FOX_JUMPS_OVER_THE_LAZY_DOG
 
-15. caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg
+15. caseString.alternateCase1(string); // ThE QuIcK BrOwN FoX JuMpS OvEr tHe lAzY DoG
 
-16. caseString.toggleCase(string); // tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG
+16. caseString.alternateCase2(string); // tHe qUiCk bRoWn fOx jUmPs oVeR ThE LaZy dOg
 
-17. caseString.spongeCase(string); // the QUIcK broWN foX JuMPS ovEr thE Lazy dOg
+17. caseString.toggleCase(string); // tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG
 
-18. caseString.noCase(string); // the quick brown fox jumps over the lazy dog
+18. caseString.spongeCase(string); // the QUIcK broWN foX JuMPS ovEr thE Lazy dOg
 
-19. caseString.sentenceCase("tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG"); // The quick brown fox jumps over the lazy dog
+19. caseString.noCase(string); // the quick brown fox jumps over the lazy dog
+
+20. caseString.sentenceCase("tHE qUICK bROWN fOX jUMPS oVER tHE lAZY dOG"); // The quick brown fox jumps over the lazy dog
 ```
 
 ### Support
