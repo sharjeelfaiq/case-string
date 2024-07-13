@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sentenceCase = exports.noCase = exports.spongeCase = exports.toggleCase = exports.alternateCase2 = exports.alternateCase1 = exports.pathCase = exports.dotCase = exports.constantCase = exports.trainCase = exports.pascalSnakeCase = exports.snakeCase = exports.kebabCase = exports.pascalCase = exports.camelCase = exports.invertCase = exports.reverseTitleCase = exports.titleCase = exports.upperCase = exports.lowerCase = void 0;
 /**
  * Converts a string to lowercase.
  *
@@ -6,6 +8,7 @@
  * @returns {string} The converted lowercase string.
  */
 const lowerCase = (str) => str.toLowerCase();
+exports.lowerCase = lowerCase;
 /**
  * Converts a string to uppercase.
  *
@@ -13,6 +16,7 @@ const lowerCase = (str) => str.toLowerCase();
  * @returns {string} The uppercase string.
  */
 const upperCase = (str) => str.toUpperCase();
+exports.upperCase = upperCase;
 /**
  * Converts a string to title case.
  *
@@ -20,11 +24,11 @@ const upperCase = (str) => str.toUpperCase();
  * @returns {string} The string converted to title case.
  */
 const titleCase = (str) => {
-    const titledStr = str.replace(/(^|[^a-zA-Z\u00C0-\u017F'])([a-zA-Z\u00C0-\u017F])/g, function (c) {
+    return str.replace(/(^|[^a-zA-Z\u00C0-\u017F'])([a-zA-Z\u00C0-\u017F])/g, function (c) {
         return c.toUpperCase();
     });
-    return titledStr;
 };
+exports.titleCase = titleCase;
 /**
  * Reverses the title case of a string.
  *
@@ -32,15 +36,15 @@ const titleCase = (str) => {
  * @returns {string} The reversed title case string.
  */
 const reverseTitleCase = (str) => {
-    const reversedTitleStr = str
+    return str
         .toLowerCase()
         .split(" ")
         .map(function (item) {
         return item.slice(0, -1) + item.slice(-1).toUpperCase();
     })
         .join(" ");
-    return reversedTitleStr;
 };
+exports.reverseTitleCase = reverseTitleCase;
 /**
  * Inverts the case of each character in a given string.
  *
@@ -48,9 +52,9 @@ const reverseTitleCase = (str) => {
  * @returns {string} The inverted string.
  */
 const invertCase = (str) => {
-    const invertedStr = str.replace(/./g, (c) => c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase());
-    return invertedStr;
+    return str.replace(/./g, (c) => c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase());
 };
+exports.invertCase = invertCase;
 /**
  * Converts a string to camel case.
  *
@@ -58,16 +62,13 @@ const invertCase = (str) => {
  * @returns {string} The camel case version of the input string.
  */
 const camelCase = (str) => {
-    function camelize(str) {
-        return str
-            .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
-            return index === 0 ? word.toLowerCase() : word.toUpperCase();
-        })
-            .replace(/\s+/g, "");
-    }
-    const camelizedStr = camelize(str);
-    return camelizedStr;
+    return str
+        .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    })
+        .replace(/\s+/g, "");
 };
+exports.camelCase = camelCase;
 /**
  * Converts a string to PascalCase.
  *
@@ -75,16 +76,13 @@ const camelCase = (str) => {
  * @returns {string} The PascalCase string.
  */
 const pascalCase = (str) => {
-    function toPascalCase(str) {
-        return `${str}`
-            .replace(new RegExp(/[-_]+/, "g"), " ")
-            .replace(new RegExp(/[^\w\s]/, "g"), "")
-            .replace(new RegExp(/\s+(.)(\w*)/, "g"), ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`)
-            .replace(new RegExp(/\w/), (s) => s.toUpperCase());
-    }
-    const pascalCasedStr = toPascalCase(str);
-    return pascalCasedStr;
+    return `${str}`
+        .replace(new RegExp(/[-_]+/, "g"), " ")
+        .replace(new RegExp(/[^\w\s]/, "g"), "")
+        .replace(new RegExp(/\s+(.)(\w*)/, "g"), ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`)
+        .replace(new RegExp(/\w/), (s) => s.toUpperCase());
 };
+exports.pascalCase = pascalCase;
 /**
  * Converts a string to kebab case.
  *
@@ -92,13 +90,12 @@ const pascalCase = (str) => {
  * @returns {string} The kebab cased string.
  */
 const kebabCase = (str) => {
-    const kebabCase = (str) => str
+    return str
         .replace(/([a-z])([A-Z])/g, "$1-$2")
         .replace(/[\s_]+/g, "-")
         .toLowerCase();
-    const kebabCasedStr = kebabCase(str);
-    return kebabCasedStr;
 };
+exports.kebabCase = kebabCase;
 /**
  * Converts a string to snake case.
  *
@@ -106,16 +103,13 @@ const kebabCase = (str) => {
  * @returns {string} The snake cased string.
  */
 const snakeCase = (str) => {
-    const toSnakeCase = (str = "") => {
-        const strArr = str.split(" ");
-        const snakeArr = strArr.reduce((acc, val) => {
-            return acc.concat(val.toLowerCase());
-        }, []);
-        return snakeArr.join("_");
-    };
-    const snakeCasedStr = toSnakeCase(str);
-    return snakeCasedStr;
+    const strArr = str.split(" ");
+    const snakeArr = strArr.reduce((acc, val) => {
+        return acc.concat(val.toLowerCase());
+    }, []);
+    return snakeArr.join("_");
 };
+exports.snakeCase = snakeCase;
 /**
  * Converts a string to Pascal Snake Case.
  *
@@ -123,20 +117,33 @@ const snakeCase = (str) => {
  * @returns {string} The string converted to Pascal Snake Case.
  */
 const pascalSnakeCase = (str) => {
-    const toPascalSnakeCase = (str = "") => {
-        const strArr = str.split(" ");
-        const snakeArr = strArr.reduce((acc, val) => {
-            return acc.concat(val
-                .replace(new RegExp(/[-_]+/, "g"), " ")
-                .replace(new RegExp(/[^\w\s]/, "g"), "")
-                .replace(new RegExp(/\s+(.)(\w*)/, "g"), ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`)
-                .replace(new RegExp(/\w/), (s) => s.toUpperCase()));
-        }, []);
-        return snakeArr.join("_");
-    };
-    const pascalSnakeCasedStr = toPascalSnakeCase(str);
-    return pascalSnakeCasedStr;
+    const strArr = str.split(" ");
+    return strArr.reduce((acc, val) => {
+        return acc.concat(val
+            .replace(new RegExp(/[-_]+/, "g"), " ")
+            .replace(new RegExp(/[^\w\s]/, "g"), "")
+            .replace(new RegExp(/\s+(.)(\w*)/, "g"), ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`)
+            .replace(new RegExp(/\w/), (s) => s.toUpperCase()));
+    }, []).join("_");
 };
+exports.pascalSnakeCase = pascalSnakeCase;
+/**
+ * Converts a string to train case.
+ * Train case is a case where each word is capitalized and separated by a hyphen.
+ * @param {string} str - The string to convert to train case.
+ * @returns {string} The string converted to train case.
+ */
+const trainCase = (str) => {
+    const strArr = str.split(" ");
+    return strArr.reduce((acc, val) => {
+        return acc.concat(val
+            .replace(new RegExp(/[-_]+/, "g"), " ")
+            .replace(new RegExp(/[^\w\s]/, "g"), "")
+            .replace(new RegExp(/\s+(.)(\w*)/, "g"), ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`)
+            .replace(new RegExp(/\w/), (s) => s.toUpperCase()));
+    }, []).join("-");
+};
+exports.trainCase = trainCase;
 /**
  * Converts a string to constant case.
  *
@@ -144,16 +151,12 @@ const pascalSnakeCase = (str) => {
  * @returns {string} The converted string in constant case.
  */
 const constantCase = (str) => {
-    const toConstantCase = (str = "") => {
-        const strArr = str.split(" ");
-        const snakeArr = strArr.reduce((acc, val) => {
-            return acc.concat(val.toUpperCase());
-        }, []);
-        return snakeArr.join("_");
-    };
-    const constantCasedStr = toConstantCase(str);
-    return constantCasedStr;
+    const strArr = str.split(" ");
+    return strArr.reduce((acc, val) => {
+        return acc.concat(val.toUpperCase());
+    }, []).join("_");
 };
+exports.constantCase = constantCase;
 /**
  * Converts a string to dot case.
  *
@@ -161,16 +164,12 @@ const constantCase = (str) => {
  * @returns {string} The dot cased string.
  */
 const dotCase = (str) => {
-    const toDotCase = (str = "") => {
-        const strArr = str.split(" ");
-        const snakeArr = strArr.reduce((acc, val) => {
-            return acc.concat(val.toLowerCase());
-        }, []);
-        return snakeArr.join(".");
-    };
-    const dotCasedStr = toDotCase(str);
-    return dotCasedStr;
+    const strArr = str.split(" ");
+    return strArr.reduce((acc, val) => {
+        return acc.concat(val.toLowerCase());
+    }, []).join(".");
 };
+exports.dotCase = dotCase;
 /**
  * Converts a string to path case.
  *
@@ -178,16 +177,12 @@ const dotCase = (str) => {
  * @returns {string} The converted string in path case.
  */
 const pathCase = (str) => {
-    const toPathCase = (str = "") => {
-        const strArr = str.split(" ");
-        const snakeArr = strArr.reduce((acc, val) => {
-            return acc.concat(val.toLowerCase());
-        }, []);
-        return snakeArr.join("/");
-    };
-    const pathCasedStr = toPathCase(str);
-    return pathCasedStr;
+    const strArr = str.split(" ");
+    return strArr.reduce((acc, val) => {
+        return acc.concat(val.toLowerCase());
+    }, []).join("/");
 };
+exports.pathCase = pathCase;
 /**
  * Converts the characters of a string to alternate case.
  *
@@ -199,9 +194,9 @@ const alternateCase1 = (str) => {
     for (var i = 0; i < newText.length; i += 2) {
         newText[i] = newText[i].toUpperCase();
     }
-    const alternateCasedStr = newText.join("");
-    return alternateCasedStr;
+    return newText.join("");
 };
+exports.alternateCase1 = alternateCase1;
 /**
  * Converts the characters of a string to alternate case.
  *
@@ -213,9 +208,9 @@ const alternateCase2 = (str) => {
     for (var i = 0; i < newText.length; i += 2) {
         newText[i] = newText[i].toLowerCase();
     }
-    const alternateCasedStr = newText.join("");
-    return alternateCasedStr;
+    return newText.join("");
 };
+exports.alternateCase2 = alternateCase2;
 /**
  * Converts the case of a string by toggling the case of each word.
  *
@@ -223,15 +218,15 @@ const alternateCase2 = (str) => {
  * @returns {string} The modified string with toggled case.
  */
 const toggleCase = (str) => {
-    const newText = str
+    return str
         .toUpperCase()
         .split(" ")
         .map(function (word) {
         return word.charAt(0).toLowerCase() + word.slice(1);
     })
         .join(" ");
-    return newText;
 };
+exports.toggleCase = toggleCase;
 /**
  * Converts a string to sponge case.
  *
@@ -245,6 +240,7 @@ const spongeCase = (str) => {
     }
     return result;
 };
+exports.spongeCase = spongeCase;
 var hasSpace = /\s/;
 var hasSeparator = /(_|-|\.|:)/;
 var hasCamel = /([a-z][A-Z]|[A-Z][a-z])/;
@@ -255,7 +251,7 @@ var hasCamel = /([a-z][A-Z]|[A-Z][a-z])/;
  * @param {String} string
  * @return {String}
  */
-function noCase(str) {
+const noCase = (str) => {
     if (hasSpace.test(str))
         return str.toLowerCase();
     if (hasSeparator.test(str))
@@ -263,7 +259,8 @@ function noCase(str) {
     if (hasCamel.test(str))
         return uncamelize(str).toLowerCase();
     return str.toLowerCase();
-}
+};
+exports.noCase = noCase;
 /**
  * Separator splitter.
  */
@@ -309,24 +306,4 @@ const sentenceCase = (str) => {
     })
         .join("");
 };
-module.exports = {
-    lowerCase,
-    upperCase,
-    titleCase,
-    reverseTitleCase,
-    invertCase,
-    camelCase,
-    pascalCase,
-    kebabCase,
-    constantCase,
-    pascalSnakeCase,
-    snakeCase,
-    dotCase,
-    pathCase,
-    alternateCase1,
-    alternateCase2,
-    toggleCase,
-    spongeCase,
-    noCase,
-    sentenceCase,
-};
+exports.sentenceCase = sentenceCase;
