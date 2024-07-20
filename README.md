@@ -1,6 +1,6 @@
-## case-string: String Manipulation Utility for JavaScript
+## case-string: [DEMO](https://case-string-demo.netlify.app/)
 
-case-string is a versatile JavaScript package that provides a comprehensive set of functions to manipulate string cases for both frontend and backend applications.
+case-string is a versatile npm library that provides a comprehensive set of functions to manipulate string cases for both frontend and backend applications.
 
 **DOCUMENTATION** https://t.ly/NJGH3
 
