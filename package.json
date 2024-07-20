@@ -1,6 +1,6 @@
 {
   "name": "case-string",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "description": "A Node.js module providing various string manipulation functions to handle string cases.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
